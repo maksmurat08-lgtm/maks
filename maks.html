@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Днём Рождения, Мамочка!</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(236, 72, 153, 0.2);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            animation: fadeIn 1s ease-out;
+            position: relative;
+        }
+
+        .decor {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        h1 {
+            color: #9d174d;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        p {
+            color: #4a5568;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            white-space: pre-line;
+        }
+
+        /* --- Стили Галереи --- */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .gallery-item {
+            position: relative;
+            padding-top: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05) rotate(1deg);
+            box-shadow: 0 8px 20px rgba(219, 39, 119, 0.2);
+        }
+
+        .gallery-item img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .no-photo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            border: 2px dashed #e2e8f0;
+            padding: 10px;
+        }
+
+        /* --- Обновленный блок подписи (Усиленное центрирование) --- */
+        .signature {
+            font-style: italic;
+            color: #9d174d;
+            font-weight: bold;
+            font-size: 1.3rem;
+            border-top: 2px solid #fce7f3;
+            padding-top: 15px;
+            
+            /* Включаем flexbox для принудительного выравнивания */
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            text-align: center;
+            
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Анимации */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="decor">🌸💝📸</div>
+        <h1>С Днём Рождения, любимая Мама!</h1>
+        <p>
+            Мамочка, в этот прекрасный день хочу сказать, что ты — мой самый главный ориентир и самый близкий человек. Твоя улыбка согревает, а твое сердце — самое доброе на свете.
+
+            Спасибо за каждую минуту твоей заботы. Будь самой счастливой, здоровой и пусть твои глаза всегда сияют радостью!
+        </p>
+
+        <!-- ГАЛЕРЕЯ. Замените адреса картинок на свои прямые ссылки -->
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://ibb.co/TB9svFTk"><img src="https://i.ibb.co/5WbPMf96/1.jpg" alt="Мама 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="no-photo" style="display:none;">Место для фото 1</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://ibb.co/n85KmkBS"><img src="https://i.ibb.co/JFMStkqP/2.jpg" alt="Мама 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="no-photo" style="display:none;">Место для фото 2</div>
+            </div>
+        <div class="signature">Твой любящий ребёнок</div>
+    </div>
+
+</body>
+</html>
